@@ -21,7 +21,12 @@ Since the frame size of the original video files is large, they were cropped whe
 </table>
 
 ### Foreground and Background
-After running algorithm, the foreground and the background of the video files are captured by the sparse matrix E and the low rank matrix X, respectively. Original, background, and foreground frames are displayed below: 
+After running algorithm, the results (original, background, and foreground frames) are displayed below 
+where
+* Foreground: moving object is captured by the sparse matrix E
+* Background: non-moving object is captred by the low rank matrix X     
+(If fine-tuning the parameters, the sparse matrix E may capture only the moving object (not the background.))
+
 <table align='center'>
 <tr align='center'>
 <td> Original 1 </td>
@@ -49,9 +54,9 @@ After running algorithm, the foreground and the background of the video files ar
 </tr>
 <tr align='center'>
 <td> Foreground 1 </td>
-<td> Background 2 </td>
-<td> Background 3 </td>
-<td> Background 4 </td>
+<td> Foreground 2 </td>
+<td> Foreground 3 </td>
+<td> Foreground 4 </td>
 </tr>
 <tr>
 <td><img width="576" alt="sparse_E_1" src="https://user-images.githubusercontent.com/67979833/87624874-c35b0c80-c6f6-11ea-9083-52d6e0e709b3.png">
