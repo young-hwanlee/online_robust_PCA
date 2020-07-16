@@ -25,7 +25,7 @@ After running the algorithm, the results (original, background, and foreground f
 where
 * Foreground: moving object is captured by the sparse matrix E
 * Background: non-moving object is captred by the low rank matrix X     
-(If fine-tuning the parameters, the sparse matrix E may capture only the moving object (not the background.))
+(If fine-tuning the parameters, running more frames (or increasing the epoch), the sparse matrix E may capture only the moving object (not the background.))
 
 <table align='center'>
 <tr align='center'>
