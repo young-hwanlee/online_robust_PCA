@@ -21,7 +21,7 @@ Since the frame size of the original video files is large, they were cropped whe
 
 ## Results
 ### Foreground and Background
-After running the algorithm, the results (original, background, and foreground frames) are displayed below 
+After running the algorithm, the results (original, background, and foreground frames) are displayed below, 
 where
 * Foreground: moving object is captured by the sparse matrix E
 * Background: non-moving object is captred by the low rank matrix X     
