@@ -18,8 +18,6 @@
 %     fx = instantaneous objective function
 %     fx_accumulate = accumulated fx
 
-% function [L,R,E,Delta_Lt,fx,fx_accumulate] = ...
-%     orpca_with_missing(Z,N,T,L_prev,Omega,lambda1,lambda2,epsilon,r,rho,sgd)
 function [L,R,E] = ...
     orpca_with_missing(Z,N,T,L_prev,Omega,lambda1,lambda2,epsilon,r,rho,sgd)
 
@@ -41,7 +39,6 @@ fx_accumulate = zeros(1,T);
 for t = 1:T    
     
     if mod(t,5e3) == 0
-%     if mod(t,1e1) == 0
         t
     end
     
@@ -86,7 +83,6 @@ for t = 1:T
     
     Delta_Lt(t) = norm(Lt-L_prev,'fro');    % change in Lt magnitude
     fx(t) = 0.5*norm(zt-Lt*rt-et)^2 + 0.5*lambda1*(norm(Lt,'fro')^2/T + norm(rt)^2) + lambda2*norm(Omega(:,t).*et,1);
-%     fx_conv(t) = sum(fx(1:t))/t;
         
     if t == 1
         fx_accumulate(t) = fx(t);
