@@ -91,16 +91,16 @@ for i = 1:nframes
     E_video(:,:,i) = reshape(E_end(i,:),[N_tmp,T_tmp]);
 end
 
-original_data_Z = VideoWriter('original_data_Z.avi');
+data_Z = VideoWriter('data_Z.avi');
 low_rank_X = VideoWriter('low_rank_X.avi');
 sparse_E = VideoWriter('sparse_E.avi');
 
-open(original_data_Z);
+open(data_Z);
 for i = 1:nframes
     frame = Z_video(:,:,i);
-    writeVideo(original_data_Z,mat2gray(frame));
+    writeVideo(data_Z,mat2gray(frame));
 end
-close(original_data_Z);
+close(data_Z);
 
 open(low_rank_X);
 for i = 1:nframes
