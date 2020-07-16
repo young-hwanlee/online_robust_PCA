@@ -7,8 +7,7 @@ However, it is modified slightly since missing data points cannot be reconstruct
 ## Dataset
 [VIRAT Video Dataset](https://viratdata.org) was used here (not in the paper), which is designed to be realistic, natural and challenging for video surveillance domains in terms of its resolution, background clutter, diversity in scenes, and human activity/event categories than existing action recognition datasets. It has become a benchmark dataset for the computer vision community.
 
-## Results
-### Original frame size
+### Original Frame Size
 Since the frame size of the original video files is large, they were cropped when running the simulation. The original and gray frame are shown below:  
 <table align='center'>
 <tr align='center'>
@@ -20,11 +19,13 @@ Since the frame size of the original video files is large, they were cropped whe
 </tr>
 </table>
 
+## Results
 ### Foreground and Background
 After running the algorithm, the results (original, background, and foreground frames) are displayed below 
 where
 * Foreground: moving object is captured by the sparse matrix E
 * Background: non-moving object is captred by the low rank matrix X     
+
 (If fine-tuning the parameters, running more frames (or increasing the epoch), the sparse matrix E may capture only the moving object (not the background.))
 
 <table align='center'>
