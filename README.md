@@ -8,13 +8,26 @@ However, it is modified slightly since missing data points cannot be reconstruct
 [VIRAT Video Dataset](https://viratdata.org) was used here (not in the paper), which is designed to be realistic, natural and challenging for video surveillance domains in terms of its resolution, background clutter, diversity in scenes, and human activity/event categories than existing action recognition datasets. It has become a benchmark dataset for the computer vision community.
 
 ## Results
-### Foreground and Background
+### Original frame size
+Since the frame size of the original video files is large, they were cropped when running the simulation. The original and gray frame are shown below:  
 <table align='center'>
 <tr align='center'>
-<td> Robust PCA for Scenario 1 </td>
-<td> Robust PCA for Scenario 2 </td>
-<td> Robust subspace clustering for Scenario 1 </td>
-<td> Robust subspace clustering for Scenario 2 </td>
+<td> Original frame </td>
+<td> Gray frame </td>
+</tr>
+<td><img width="576" alt="original_figure" src="https://user-images.githubusercontent.com/67979833/87625647-a6bfd400-c6f8-11ea-9b7b-7c90083cdf33.png">
+<td><img width="576" alt="gray_figure" src="https://user-images.githubusercontent.com/67979833/87625645-a6273d80-c6f8-11ea-98c6-66b3906742ce.png">
+</tr>
+</table>
+
+### Foreground and Background
+After running algorithm, the foreground and the background of the video files are captured by the sparse matrix E and the low rank matrix X, respectively. Original, background, and foreground frames are shown below: 
+<table align='center'>
+<tr align='center'>
+<td> Original 1 </td>
+<td> Original 2 </td>
+<td> Original 3 </td>
+<td> Original 4 </td>
 </tr>
 <tr>
 <td><img width="576" alt="data_Z_1" src="https://user-images.githubusercontent.com/67979833/87624863-c229df80-c6f6-11ea-85c3-b68e448fc8ca.png">
@@ -23,10 +36,10 @@ However, it is modified slightly since missing data points cannot be reconstruct
 <td><img width="576" alt="data_Z_4" src="https://user-images.githubusercontent.com/67979833/87624868-c2c27600-c6f6-11ea-95d1-1f870a879d1f.png">
 </tr>
 <tr align='center'>
-<td> Robust PCA for Scenario 1 </td>
-<td> Robust PCA for Scenario 2 </td>
-<td> Robust subspace clustering for Scenario 1 </td>
-<td> Robust subspace clustering for Scenario 2 </td>
+<td> Background 1 </td>
+<td> Background 2 </td>
+<td> Background 3 </td>
+<td> Background 4 </td>
 </tr>
 <tr>
 <td><img width="576" alt="low_rank_X_1" src="https://user-images.githubusercontent.com/67979833/87624870-c2c27600-c6f6-11ea-84d9-51189cadcb69.png">
@@ -35,10 +48,10 @@ However, it is modified slightly since missing data points cannot be reconstruct
 <td><img width="576" alt="low_rank_X_4" src="https://user-images.githubusercontent.com/67979833/87624873-c2c27600-c6f6-11ea-91c7-dc86f7074961.png">
 </tr>
 <tr align='center'>
-<td> Robust PCA for Scenario 1 </td>
-<td> Robust PCA for Scenario 2 </td>
-<td> Robust subspace clustering for Scenario 1 </td>
-<td> Robust subspace clustering for Scenario 2 </td>
+<td> Foreground 1 </td>
+<td> Background 2 </td>
+<td> Background 3 </td>
+<td> Background 4 </td>
 </tr>
 <tr>
 <td><img width="576" alt="sparse_E_1" src="https://user-images.githubusercontent.com/67979833/87624874-c35b0c80-c6f6-11ea-9083-52d6e0e709b3.png">
@@ -46,5 +59,4 @@ However, it is modified slightly since missing data points cannot be reconstruct
 <td><img width="576" alt="sparse_E_3" src="https://user-images.githubusercontent.com/67979833/87624876-c35b0c80-c6f6-11ea-8578-1884429359d4.png">
 <td><img width="576" alt="sparse_E_4" src="https://user-images.githubusercontent.com/67979833/87624877-c35b0c80-c6f6-11ea-8b68-dc6ad9bb09f0.png">
 </tr>
-<tr>
 </table>
