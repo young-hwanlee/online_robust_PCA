@@ -17,7 +17,7 @@ simul_count = 1;    % simulation count to take an average
 
 %%
 % access Video with VideoReader
-Z_tmp = VideoReader('/Users/young-hwanlee/Desktop/Young-hwan Lee/Project/archive_YounghwanLee/GitHub/orpca/dataset/VIRAT_S_000200_00_000100_000171.mp4');
+Z_tmp = VideoReader('path to the video file');
 
 % decrease the frame size and frame numbers in order to save the running time
 % nframes = Z_tmp.NumberOfFrames;
