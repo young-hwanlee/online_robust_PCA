@@ -21,7 +21,7 @@ Since the frame size of the original video files is large, they were cropped whe
 </table>
 
 ### Foreground and Background
-After running algorithm, the foreground and the background of the video files are captured by the sparse matrix E and the low rank matrix X, respectively. Original, background, and foreground frames are shown below: 
+After running algorithm, the foreground and the background of the video files are captured by the sparse matrix E and the low rank matrix X, respectively. Original, background, and foreground frames are displayed below: 
 <table align='center'>
 <tr align='center'>
 <td> Original 1 </td>
